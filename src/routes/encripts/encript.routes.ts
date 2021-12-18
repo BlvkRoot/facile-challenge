@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { createEncriptFactory } from "../../factories/encripts/CreateEncriptFactory";
 import { getPostByTitleFactory } from "../../factories/encripts/GetEncriptByIdFactory";
-import { postMiddleware } from "../../middleware/encripts/post.middleware";
+import { postMiddleware } from "../../middleware/encripts/encript.middleware";
 
 const postRouter = Router();
 

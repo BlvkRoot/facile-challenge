@@ -8,18 +8,10 @@ export const postMiddleware = async (
   next: NextFunction
 ) => {
   const schema = yup.object().shape({
-    title: yup
+    name: yup
       .string()
-      .required("O campo título é obrigatório")
+      .required("O campo \"name\" é obrigatório")
       .nullable(false),
-    description: yup
-        .string()
-        .required("O campo descrição é obrigatório")
-        .nullable(false),
-    status: yup
-        .string()
-        .required("O campo status é obrigatório")
-        .nullable(false),
   });
   await validationErrors(request, response, next, schema);
 };
