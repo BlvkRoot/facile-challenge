@@ -31,6 +31,11 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
 ## 🐋 Docker Instalação
 
 ```bash
+    Seguir os passos no link abaixo para instalar o Docker caso não tenha na sua máquina
+```
+- [Docker](https://docs.docker.com/engine/install)
+
+```bash
 
     // Clonar repositório
     $ seguir o primeiro passo da instalação caso não tenha feito o clone
@@ -40,9 +45,6 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
 
     // Instalar dependências
     $ seguir o terceiro passo da instalação
-
-    // Seguir os passos no link abaixo para instalar o Docker caso não tenha na sua máquina
-    [Docker](https://docs.docker.com/engine/install)
 
     // Confirmar se o Docker já esta instalado
     $ docker --version
