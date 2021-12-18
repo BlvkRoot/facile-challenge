@@ -13,17 +13,17 @@ export class Encript {
   @Column()
   encripted_name: string;
 
-  @Column("datetime", {
+  @Column("timestamp", {
     name: "created_at",
     nullable: true,
-    default: () => "CURRENT_TIMESTAMP",
+    default: "now",
   })
   createdAt?: Date | null;
 
-  @Column("datetime", {
+  @Column("timestamp", {
     name: "updated_at",
     nullable: true,
-    default: () => "CURRENT_TIMESTAMP",
+    default: "now",
   })
   updatedAt?: Date | null;
 

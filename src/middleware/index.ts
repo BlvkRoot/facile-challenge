@@ -13,7 +13,7 @@ export const validationErrors = async (
   } catch (error) {
     if (error instanceof yup.ValidationError) {
       return response.status(400).json({
-        success: false,
+        code: 'E_VALIDATION_FAILURE',
         message: error.message,
       });
     }

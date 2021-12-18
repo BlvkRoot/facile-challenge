@@ -1,4 +1,5 @@
 import { IEncriptRepository } from "../../repositories/encripts/IEncriptRepository";
+import { EncriptionService } from "./EncriptionService";
 
 interface IEncriptRequest {
   name: string;
@@ -6,13 +7,16 @@ interface IEncriptRequest {
 
 class CreateEncriptService {
   constructor(
-    private encriptRepository: IEncriptRepository
+    private encriptRepository: IEncriptRepository,
+    private encriptionService: EncriptionService
   ) {}
 
   async execute({
     name }: IEncriptRequest) {
     try {
-      const encript = await this.encriptRepository.create(name);
+
+      const encripted_name = await this.encriptionService.encript(name);
+      const encript = await this.encriptRepository.create(encripted_name);
 
       return encript;
     } catch ({ message }) {

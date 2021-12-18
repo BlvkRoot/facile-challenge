@@ -3,14 +3,14 @@ import { createEncriptFactory } from "../../factories/encripts/CreateEncriptFact
 import { getEncriptByIdFactory } from "../../factories/encripts/GetEncriptByIdFactory";
 import { encriptMiddleware } from "../../middleware/encripts/encript.middleware";
 
-const postRouter = Router();
+const encriptRouter = Router();
 
-postRouter.post("/encripts", encriptMiddleware, (request, response) => {
+encriptRouter.post("/encripts", encriptMiddleware, (request, response) => {
   createEncriptFactory().handle(request, response);
 });
 
-postRouter.get("/encripts/:encript_id", (request, response) => {
+encriptRouter.get("/encripts/:encript_id", (request, response) => {
   getEncriptByIdFactory().handle(request, response);
 });
 
-export { postRouter };
+export { encriptRouter };
