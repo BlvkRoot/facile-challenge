@@ -24,6 +24,15 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
     // Instalar dependências
     $ yarn
 
+    // Criar o banco de dados POSTGRES 
+    1 - nome: facile_challenge_bd
+    2 - importar o ficheiro dump para criação da tabela dentro de 
+        **src/database/dump/encripts.sql**
+    2 - copiar o ficheiro .env.example e renomear para .env
+    3 - configurar as váriaveis de ambiente do banco de dados dentro do ficheiro .env:
+        POSTGRESQL_HOST, POSTGRESQL_USER, POSTGRESQL_PASSWORD, 
+        POSTGRESQL_DATABASE, POSTGRESQL_PORT
+
     // Iniciar projeto
     $ yarn dev
 ```
@@ -58,3 +67,14 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
     // Confirmar se existem containers que falharam subir (Windows | Linux)
     $ docker ps -a | sudo docker ps -a # A Flag -a nos possibilita ver também containers parados
 ```
+
+## 📑 Funcionalidades
+
+[ ] Cadastrar a string encriptada e retornar junto o Id <br/>
+[ ] Não Permitir o Cadastro de uma string já encriptada <br/>
+[ ] Listar a string desencriptada pelo Id <br/>
+[ ] Não listar a string caso o Id não exista no banco de dados<br/>
+
+---
+
+<h3 align="center">Desenvolvido por 💻 Henriques Salucamba </h3>
