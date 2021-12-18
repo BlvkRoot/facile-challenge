@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  facile-challenge-app:
+    container_name: facile-challenge-api
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3333:3333
+    networks:
+      - facile-network
+    depends_on:
+      - "facile-challenge-db"
+
+
+  facile-challenge-db:
+    image: postgres:alpine
+    container_name: facile-challenge-db
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 5342:5342
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRESQL_PASSWORD}
+      POSTGRES_DB: ${POSTGRESQL_DATABASE}
+    networks:
+      - facile-network
+
+networks:
+  facile-network:
+    driver: bridge

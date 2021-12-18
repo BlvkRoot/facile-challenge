@@ -66,6 +66,8 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
 
     // Confirmar se existem containers que falharam subir (Windows | Linux)
     $ docker ps -a | sudo docker ps -a # A Flag -a nos possibilita ver também containers parados
+
+    NB: Quando estiver a testar com o Docker o POSTGRESQL_HOST deve ser o nome do serviço do banco de dados definido no ficheiro docker-compose.yml
 ```
 
 ## 📑 Funcionalidades
