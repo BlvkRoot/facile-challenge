@@ -1,14 +1,11 @@
 import { Router } from "express";
-import { createPostFactory } from "../../factories/encripts/CreateEncriptFactory";
-import { deletePostFactory } from "../../factories/encripts/DeletePostFactory";
-import { getAllPostsFactory } from "../../factories/encripts/GetAllPostsFactory";
+import { createEncriptFactory } from "../../factories/encripts/CreateEncriptFactory";
 import { getPostByTitleFactory } from "../../factories/encripts/GetEncriptByIdFactory";
-import { updatePostByIdFactory } from "../../factories/encripts/UpdatePostByIdFactory";
 import { postMiddleware } from "../../middleware/encripts/post.middleware";
 
 const postRouter = Router();
 
-postRouter.post("/posts", (request, response) => {
+postRouter.post("/encripts", (request, response) => {
   createPostFactory().handle(request, response);
 });
 

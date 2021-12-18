@@ -8,10 +8,10 @@ class EncriptRepository implements IEncriptRepository {
     this.repository = getRepository(Encript);
   }
 
-  async create(name: string): Promise<Encript> {
+  async create(encripted_name: string): Promise<Encript> {
     try {
       const encriptData = this.repository.create({
-        name,
+        encripted_name,
       });
       return await this.repository.save(encriptData);
     } catch ({ message }) {}

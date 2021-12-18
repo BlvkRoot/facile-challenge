@@ -1,14 +1,12 @@
-import { CreatePostController } from "../../controllers/encripts/CreateEncriptController";
-import { PostRepository } from "../../repositories/encripts/implementation/EncriptRepository";
-import { UserRepository } from "../../repositories/users/Implementation/UserRepository";
-import { CreatePostService } from "../../services/posts/CreatePostService";
+import { CreateEncriptController } from "../../controllers/encripts/CreateEncriptController";
+import { EncriptRepository } from "../../repositories/encripts/implementation/EncriptRepository";
+import { CreateEncriptService } from "../../services/encripts/CreateEncriptService";
 
-const createPostFactory = () => {
-  const postRepository = new PostRepository();
-  const userRepository = new UserRepository();
-  const postService = new CreatePostService(postRepository, userRepository);
-  const createPost = new CreatePostController(postService);
-  return createPost;
+const createEncriptFactory = () => {
+  const encriptRepository = new EncriptRepository();
+  const encriptService = new CreateEncriptService(encriptRepository);
+  const createEncription = new CreateEncriptController(encriptService);
+  return createEncription;
 };
 
-export { createPostFactory };
+export { createEncriptFactory };

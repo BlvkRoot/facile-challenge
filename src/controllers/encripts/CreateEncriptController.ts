@@ -39,4 +39,4 @@ class CreateEncriptController {
   }
 }
 
-export { CreatePostController };
+export { CreateEncriptController };
