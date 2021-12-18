@@ -1,34 +1,20 @@
 import { Request, Response } from "express";
-import { CreatePostService } from "../../services/posts/CreateEncriptService";
+import { CreateEncriptService } from "../../services/encripts/CreateEncriptService";
 
 class CreateEncriptController {
-  constructor(private postService: CreatePostService) {}
+  constructor(private encriptService: CreateEncriptService) {}
 
   async handle(request: Request, response: Response) {
-    const { title, description, status, cover_photo, post_id, user_id } =
-      request.body;
-
-      console.log(request.body);
-
-      return false
+    const { name } = request.body;
 
     try {
-      const post = await this.postService.execute({
-        title,
-        description,
-        status,
-        cover_photo,
-        post_id,
-        user_id,
+      const { id, encripted_name } = await this.encriptService.execute({
+        name,
       });
 
-    //   Set user password null not to be exposed
-      if(post?.user) post.user.password = null;
-
       return response.status(200).json({
-        success: true,
-        message: "Post criado com sucesso",
-        data: post,
+        id,
+        encripted_name,
       });
     } catch ({ message }) {
       return response.status(400).json({
