@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import * as yup from "yup";
 import { validationErrors } from "..";
 
-export const postMiddleware = async (
+export const encriptMiddleware = async (
   request: Request,
   response: Response,
   next: NextFunction
