@@ -14,12 +14,23 @@ class EncriptRepository implements IEncriptRepository {
         encripted_name,
       });
       return await this.repository.save(encriptData);
-    } catch ({ message }) {}
+    } catch ({ message }) {
+      throw new Error(message);
+    }
   }
 
   async findEncriptById(id: string): Promise<Encript> {
     try {
       const encript = await this.repository.findOne({ id });
+      return encript;
+    } catch ({ message }) {
+      throw new Error(message);
+    }
+  }
+
+  async findEncriptByEncriptedName(encripted_name: string): Promise<Encript> {
+    try {
+      const encript = await this.repository.findOne({ encripted_name });
       return encript;
     } catch ({ message }) {
       throw new Error(message);
