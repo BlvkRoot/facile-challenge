@@ -1,24 +1,22 @@
 import { Request, Response } from "express";
-import { GetPostByTitleService } from "../../services/posts/GetPostByTitleService";
+import { GetEncriptByIdService } from "../../services/encripts/GetEncriptByIdService";
 
 class GetEncriptByIdController {
-  constructor(private postService: GetPostByTitleService) {}
+  constructor(private encriptService: GetEncriptByIdService) {}
 
   async handle(request: Request, response: Response) {
-    const { title } = request.params;
+    const { encript_id } = request.params;
     try {
-      const post = await this.postService.execute({ title });
-
-      //   Set user password null not to be exposed
-      if (post?.user) post.user.password = null;
+      const { id, encripted_name } = await this.encriptService.execute({
+        encript_id,
+      });
 
       return response.status(200).json({
-        success: true,
-        data: post,
+        id,
+        encripted_name,
       });
     } catch ({ message }) {
       return response.status(400).json({
-        success: false,
         message,
       });
     }

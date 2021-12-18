@@ -18,7 +18,7 @@ class CreateEncriptController {
       });
     } catch ({ message }) {
       return response.status(400).json({
-        success: false,
+        code: 'E_VALIDATION_FAILURE',
         message,
       });
     }
