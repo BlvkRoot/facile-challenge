@@ -1,12 +1,12 @@
-import { GetPostByTitleController } from "../../controllers/encripts/GetEncriptByIdController";
-import { PostRepository } from "../../repositories/encripts/implementation/EncriptRepository";
-import { GetPostByTitleService } from "../../services/posts/GetPostByTitleService";
+import { GetEncriptByIdController } from "../../controllers/encripts/GetEncriptByIdController";
+import { EncriptRepository } from "../../repositories/encripts/implementation/EncriptRepository";
+import { GetEncriptByIdService } from "../../services/encripts/GetEncriptByIdService";
 
-const getPostByTitleFactory = () => {
-  const postRepository = new PostRepository();
-  const postService = new GetPostByTitleService(postRepository);
-  const getPost = new GetPostByTitleController(postService);
-  return getPost;
+const getEncriptByIdFactory = () => {
+  const encriptRepository = new EncriptRepository();
+  const encriptService = new GetEncriptByIdService(encriptRepository);
+  const getEncription = new GetEncriptByIdController(encriptService);
+  return getEncription;
 };
 
-export { getPostByTitleFactory }
+export { getEncriptByIdFactory }

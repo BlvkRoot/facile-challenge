@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { GetPostByTitleService } from "../../services/posts/GetPostByTitleService";
 
-class GetPostByTitleController {
+class GetEncriptByIdController {
   constructor(private postService: GetPostByTitleService) {}
 
   async handle(request: Request, response: Response) {
@@ -25,4 +25,4 @@ class GetPostByTitleController {
   }
 }
 
-export { GetPostByTitleController };
+export { GetEncriptByIdController };
