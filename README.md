@@ -46,15 +46,15 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
     // Instalar dependências
     $ seguir o terceiro passo da instalação
 
-    // Confirmar se o Docker já esta instalado
-    $ docker --version
+    // Confirmar se o Docker já esta instalado (Windows | Linux)
+    $ docker --version | sudo docker --version
 
-    // Rodar o build da aplicação e subir os containers
-    $ docker-compose up -d # Para rodar os serviços em modo detach e não travar o terminal
+    // Rodar o build da aplicação e subir os containers (Windows | Linux)
+    $ docker-compose up -d | sudo docker-compose up -d # Para rodar os serviços em modo detach e não travar o terminal
 
-    // Confirmar se os containers estão rodando
-    $ docker ps # Lista apenas containers/serviços que estão a Rodar
+    // Confirmar se os containers estão rodando (Windows | Linux)
+    $ docker ps | sudo docker ps # Lista apenas containers/serviços que estão a Rodar
 
-    // Confirmar se existem containers que falharam subir
-    $ docker ps -a # A Flag -a nos possibilita ver também containers parados
+    // Confirmar se existem containers que falharam subir (Windows | Linux)
+    $ docker ps -a | sudo docker ps -a# A Flag -a nos possibilita ver também containers parados
 ```
