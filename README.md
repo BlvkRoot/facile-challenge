@@ -56,5 +56,5 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
     $ docker ps | sudo docker ps # Lista apenas containers/serviços que estão a Rodar
 
     // Confirmar se existem containers que falharam subir (Windows | Linux)
-    $ docker ps -a | sudo docker ps -a# A Flag -a nos possibilita ver também containers parados
+    $ docker ps -a | sudo docker ps -a # A Flag -a nos possibilita ver também containers parados
 ```
