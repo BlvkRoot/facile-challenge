@@ -1,9 +1,9 @@
 ## FACILE-CHALLENGE-API
 
 <p align="center">🏆
-  <a href="#-about"> Sobre </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#-download-project">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#️-functionalities">Funcionalidades</a>
+  <a href="#-sobre"> Sobre </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#️-funcionalidades">Funcionalidades</a>
 </p>
 
 # 📖 Sobre
