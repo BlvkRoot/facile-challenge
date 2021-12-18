@@ -5,7 +5,7 @@ class EncriptionService {
     }
 
     async decript(encripted_name: string): Promise<string> {
-        return Buffer.from(encripted_name).toString('ascii');
+        return Buffer.from(encripted_name, 'base64').toString('utf-8');
     }
 }
 

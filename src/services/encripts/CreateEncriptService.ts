@@ -18,7 +18,7 @@ class CreateEncriptService {
         await this.encriptRepository.findEncriptByEncriptedName(encripted_name);
 
       if (encriptedNameAlreadyExists) {
-        throw new Error(`O nome ${name} já foi encriptado.`);
+        throw new Error(`O nome \"${name}\" já foi encriptado.`);
       }
       const encript = await this.encriptRepository.create(encripted_name);
       return encript;
