@@ -37,7 +37,7 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
     $ yarn start # Este comando também já vai rodar a migration para criar a nossa tabela no banco de dados
 
     // Testando com Insomnia
-    1 - Importar o ficheiro JSON dentro do diretório **src/insomnia/        facile-challenge-api-routes** para o INSOMNIA na sua máquina
+    1 - Importar o ficheiro JSON dentro do diretório **src/insomnia/facile-challenge-api-routes** para o INSOMNIA na sua máquina
     2 - Testar as ENDPOINTS de cadastro e listagem da string
 ```
 
