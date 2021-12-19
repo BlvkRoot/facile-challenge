@@ -89,4 +89,21 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
 - *local:* http://localhost:3333/api/v1
 - *remote:* https://facile-challengeapp.herokuapp.com/api/v1/
 
+# Endpoints: 
+
+```bash
+[
+      {
+        GET: "/encripts/1",
+        POST: {
+          uri: "/encripts",
+          body: {
+            name: "Olá meu nome é string",
+          },
+        },
+      },
+]
+```
+
+
 <h3 align="center">Desenvolvido por 💻 Henriques Salucamba </h3>
