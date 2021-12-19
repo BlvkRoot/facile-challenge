@@ -79,4 +79,9 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
 
 ---
 
+## BASEURLS
+
+- *local:* http://localhost:3333/api/v1
+- *remote:* https://facile-challengeapp.herokuapp.com/api/v1/
+
 <h3 align="center">Desenvolvido por 💻 Henriques Salucamba </h3>
