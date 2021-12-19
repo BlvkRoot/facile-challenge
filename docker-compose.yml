@@ -24,8 +24,7 @@ services:
     ports:
       - 5342:5342
     environment:
-      POSTGRES_PASSWORD: ${POSTGRESQL_PASSWORD}
-      POSTGRES_DB: ${POSTGRESQL_DATABASE}
+      DATABASE_URL: ${DATABASE_URL}
     networks:
       - facile-network
 

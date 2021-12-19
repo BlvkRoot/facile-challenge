@@ -4,7 +4,7 @@ module.exports = {
     "type": "postgres",
     "url": process.env.DATABASE_URL,
     "ssl": { rejectUnauthorized: false},
-    "synchronize": true,
+    "synchronize": false,
     "logging": false,
     "entities": [
        "dist/entities/**/{*.ts,*.js}"

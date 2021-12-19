@@ -18,14 +18,7 @@ export class Encript {
     nullable: true,
     default: "now",
   })
-  createdAt?: Date | null;
-
-  @Column("timestamp", {
-    name: "updated_at",
-    nullable: true,
-    default: "now",
-  })
-  updatedAt?: Date | null;
+  created_at?: Date | null;
 
   constructor(props: Omit<Encript, "id">, id?: string) {
     if (!this.id) {

@@ -30,11 +30,17 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
         **src/database/dump/encripts.sql**
     2 - copiar o ficheiro .env.example e renomear para .env
     3 - configurar as váriaveis de ambiente do banco de dados dentro do ficheiro .env:
-        POSTGRESQL_HOST, POSTGRESQL_USER, POSTGRESQL_PASSWORD, 
-        POSTGRESQL_DATABASE, POSTGRESQL_PORT
+        DATABASE_URL=postgres://username:password@hostname:port/database
 
-    // Iniciar projeto
-    $ yarn dev
+    // Compilar o projecto
+    $ yarn build # para compilar os ficheiros typescript para javascript
+    
+    // Iniciar o projecto
+    $ yarn start 
+
+    // Testando com Insomnia
+    1 - Importar o ficheiro JSON dentro do diretório **src/insomnia/        facile-challenge-api-routes** para o INSOMNIA na sua máquina
+    2 - Testar as ENDPOINTS de cadastro e listagem da string
 ```
 
 ## 🐋 Docker Instalação
@@ -67,13 +73,14 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
     // Confirmar se existem containers que falharam subir (Windows | Linux)
     $ docker ps -a | sudo docker ps -a # A Flag -a nos possibilita ver também containers parados
 
-    NB: Quando estiver a testar com o Docker o POSTGRESQL_HOST deve ser o nome do serviço do banco de dados definido no ficheiro docker-compose.yml
+    NB: Quando estiver a testar com o Docker o hostname na DATABASE_URL deve ser o nome do serviço do banco de dados definido no ficheiro docker-compose.yml
 ```
 
 ## 📑 Funcionalidades
 
 [ ] Cadastrar a string encriptada e retornar junto o Id <br/>
 [ ] Não Permitir o Cadastro de uma string já encriptada <br/>
+[ ] Não Permitir o Cadastro de uma string vazia <br/>
 [ ] Listar a string desencriptada pelo Id <br/>
 [ ] Não listar a string caso o Id não exista no banco de dados<br/>
 
