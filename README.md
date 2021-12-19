@@ -26,8 +26,6 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
 
     // Criar o banco de dados POSTGRES 
     1 - nome: facile_challenge_bd
-    2 - importar o ficheiro dump para criação da tabela dentro de 
-        **src/database/dump/encripts.sql**
     2 - copiar o ficheiro .env.example e renomear para .env
     3 - configurar as váriaveis de ambiente do banco de dados dentro do ficheiro .env:
         DATABASE_URL=postgres://username:password@hostname:port/database
@@ -36,7 +34,7 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
     $ yarn build # para compilar os ficheiros typescript para javascript
     
     // Iniciar o projecto
-    $ yarn start 
+    $ yarn start # Este comando também já vai rodar a migration para criar a nossa tabela no banco de dados
 
     // Testando com Insomnia
     1 - Importar o ficheiro JSON dentro do diretório **src/insomnia/        facile-challenge-api-routes** para o INSOMNIA na sua máquina
