@@ -29,6 +29,14 @@ services:
     networks:
       - facile-network
 
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 3535:8080
+    networks:
+      - facile-network
+
 networks:
   facile-network:
     driver: bridge
