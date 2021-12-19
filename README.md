@@ -76,11 +76,11 @@ Esse projeto tem como objetivo encriptar e decriptar uma string.
 
 ## 📑 Funcionalidades
 
-[ ] Cadastrar a string encriptada e retornar junto o Id <br/>
-[ ] Não Permitir o Cadastro de uma string já encriptada <br/>
-[ ] Não Permitir o Cadastro de uma string vazia <br/>
-[ ] Listar a string desencriptada pelo Id <br/>
-[ ] Não listar a string caso o Id não exista no banco de dados<br/>
+[✅] Cadastrar a string encriptada e retornar junto o Id <br/>
+[🚫] Não Permitir o Cadastro de uma string já encriptada <br/>
+[🚫] Não Permitir o Cadastro de uma string vazia <br/>
+[✅] Listar a string desencriptada pelo Id <br/>
+[🚫] Não listar a string caso o Id não exista no banco de dados<br/>
 
 ---
 
