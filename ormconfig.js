@@ -1,3 +1,5 @@
+const { resolve } = require('path');
+
 module.exports = {
     "type": "postgres",
     "url": process.env.DATABASE_URL,
@@ -5,17 +7,17 @@ module.exports = {
     "synchronize": true,
     "logging": false,
     "entities": [
-       "src/entities/**/*.ts"
+       "dist/entities/**/{*.ts,*.js}"
     ],
     "migrations": [
-       "src/database/migration/**/*.ts"
+       "dist/database/migration/**/{*.ts,*.js}"
     ],
     "subscribers": [
-       "src/subscriber/**/*.ts"
+       "dist/subscriber/**/{*.ts,*.js}"
     ],
     "cli": {
-       "entitiesDir": "src/entities",
-       "migrationsDir": "src/database/migration",
-       "subscribersDir": "src/subscriber"
+       "entitiesDir": "dist/entities",
+       "migrationsDir": "dist/database/migration",
+       "subscribersDir": "dist/subscriber"
     }
  } 
